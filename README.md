@@ -27,10 +27,8 @@ Grahp Neural Networks, Recommender System, Graph Attention Network, Heterogenous
 ## Data overview and graph structure
 Data used for this project comest from [The Movies Dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset). From the data we generated user and movie features (sample can be seen in the data folder) and utilized ratings as edge weights. Having limited processsing power we used a subsample of the data:
 
-`Number of users: 671`
-
-`Number of movies: 2816`
-
+`Number of users: 671`  
+`Number of movies: 2816`  
 `Number of ratings: 44905`
 
 There are two types of nodes users and movies, therefore, we are dealing with a heterogenous graph and more specifically with a bipartite graph. To create the graph we used Pytorch Geometric (PYG). On a fundamental level PYG graphs are always directed, therefore, we converted the initial graph to an undirected one since our edges do not have any particular direction and indicate a two way relationship between the nodes. This is done by creating a reverse connection for each edge originally added to the graph (this can be seen on the below outline as 'movie, rev_rating, user' connection).
