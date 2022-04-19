@@ -1,2 +1,1 @@
-# End-to-end-GNN-based-recommender-system
-Graph-based approach to recommender systems. Employs GATs and MLP to generate personalised movie recommendations
+Source data available at: https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset
