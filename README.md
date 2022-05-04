@@ -64,7 +64,20 @@ The final model can be summarised in the outline below:
 
 
 ## Results
-TO DO
+The bolw table shows results for 3 benchmark models and our end-to-end GNN approach. The first benchmark outputs random predictions. Second benchmark predicts the average rating for a movie for all users. In this approach all users get the same recommendations, the first one being the overall highest rated movie in the dataset. The third benchmark is a standard collaborative filtering approach. The results are summarised in the below table.
+
+  
+|        **Method**       | **MAE** | **RMSE** |
+|:-----------------------:|:-------:|:--------:|
+| Random predictions      | 1.50    | 1.86     |
+| Average rating          | 0.70    | 0.91     |
+| Collaborative filtering | 0.68    | 0.88     |
+| **End-to-end GNN**      | **0.99**| **1.09** |
+
+
+Collaborative filtering method worked best for our dataset. This is not surprising since collaborative filtering has proven to give good results in an array of research and business applications. On the other hand the `end-to-end graph-based approach produced mixed results`. Having seen this method work in other use cases we had to reassess the assumptions made and identified three possible explanations.
+
+First, we might be lacking training time. Given limited resources of our machines we were not able to train the model for more than 40-50 epochs. Second, we might have not fed the model with sufficient enough amount of data. Many graph-based approaches put an emphasis on how to deal with massive amounts of data, because that is what often happens in the real use cases. However, mainly for computational reasons we used a subset of the data. It could have been the case that the model was unable to learn meaningful representations due to too few examples. Lastly, we could be facing a design issue. Perhaps the model we are using is not fit for purpose, is lacking layers, width or other components. We observed a partial occurance of high bias meaning we perhaps should have increased the size of the model. This again was unfeasible due to processing power constraints of our machines.
 
 ## Credits
 Nevina Dalal  
