@@ -64,7 +64,7 @@ The final model can be summarised in the outline below:
 
 
 ## Results
-The bolw table shows results for 3 benchmark models and our end-to-end GNN approach. The first benchmark outputs random predictions. Second benchmark predicts the average rating for a movie for all users. In this approach all users get the same recommendations, the first one being the overall highest rated movie in the dataset. The third benchmark is a standard collaborative filtering approach. The results are summarised in the below table.
+The below table shows results for 3 benchmark models and our end-to-end GNN approach. The first benchmark outputs random predictions. Second benchmark predicts the average rating for a movie for all users. In this approach all users get the same recommendations, the first one being the overall highest rated movie in the dataset. The third benchmark is a standard collaborative filtering approach. The results are summarised in the below table.
 
   
 |        **Method**       | **MAE** | **RMSE** |
